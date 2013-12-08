@@ -6,6 +6,25 @@ body {
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: 'Lobster', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    color: black;
+    margin: 0;
+    margin-top: 20px;
 }
 
 .snow {
@@ -15,5 +34,30 @@ body {
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
+}
+
+.content {
+    background: rgb(135, 206, 235);
+    background: rgba(135, 206, 235, 0.7);
+    padding: 30px;
+    border-radius: 5px;
+    width: 70%;
+    margin: 10px auto;
+    height: 100%;
+}
+
+.btn {
+    font-size: 36px;
+    font-family: 'Lobster', 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: center;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: auto;
+    width: 500px;
+    padding: 5px 0 15px 0;
+    margin-top: 30px;
+    cursor: pointer;
 }
 
