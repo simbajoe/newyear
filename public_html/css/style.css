@@ -1,0 +1,19 @@
+body {
+    background: no-repeat center center fixed;
+    background-image: url('/img/bg/winter-night.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.snow {
+    position: absolute;
+    top: -30;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+
