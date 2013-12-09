@@ -5,7 +5,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +13,7 @@ h2 {
     font-size: 36px;
     font-family: 'Lobster', 'Trebuchet MS', sans-serif;
     text-align: center;
-    color: black;
+    color: #192f7b;
     margin: 0;
 }
 
@@ -22,7 +21,7 @@ p {
     font-size: 18px;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: justify;
-    color: black;
+    color: #192f7b;
     margin: 0;
     margin-top: 20px;
 }
@@ -42,14 +41,17 @@ p {
     padding: 30px;
     border-radius: 5px;
     width: 70%;
-    margin: 10px auto;
-    height: 100%;
+    position: absolute;
+    margin: 10px;
+}
+
+.page {
+    display: none;
 }
 
 .btn {
     font-size: 36px;
     font-family: 'Lobster', 'Trebuchet MS', sans-serif;
-    color: black;
     text-align: center;
     color: red;
     border: 1px solid red;
@@ -60,4 +62,64 @@ p {
     margin-top: 30px;
     cursor: pointer;
 }
+
+.textField, .ok {
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 24px;
+    background-color: rgb(25, 47, 123);
+    background-color: rgba(25, 47, 123, 0.2);
+    border-color: rgb(25, 47, 123);
+    border-color: rgba(25, 47, 123, 0.5);
+    outline: 0;
+    border-width: 1px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.ok {
+    cursor: pointer;
+}
+
+.party {
+    clear: both;
+}
+
+.party .name, .party .wantToGift {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 24px;
+    font-family: 'Lobster', 'Trebuchet MS', sans-serif;
+    color: red;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+}
+
+.party .name {
+    color: red;
+    border-color: red;
+}
+
+.party .wantToGift {
+    color: #226;
+    border-color: #226;
+    cursor: pointer;
+}
+
+.party .wantToGift.noGift {
+    opacity: 0.3;
+}
+
+.remove {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    cursor: pointer;
+}
+
 
