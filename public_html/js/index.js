@@ -13,7 +13,6 @@
     };
 
     Parties.remove = function (id) {
-        console.log(id);
         $('div[data-id="' + id + '"]').remove();
     };
 
@@ -54,7 +53,6 @@
         if (name.length > 0) {
             var id = ++this.id;
             var element = this.newOneDiv(id, name).appendTo('.parties');
-            console.log(element.data('id'));
             $('.party').each(function () {
                 var otherId = $(this).data('id');
                 var otherName = $(this).data('name');
@@ -93,7 +91,7 @@ $(window).load(function () {
         '/img/snow/15.png'
     ], 400, 20000);
     /*snow.run();*/
-    Navigation.showPage('create');
+    Navigation.showPage('main');
     $('.createRaffle').click(function () {
         Navigation.showPage('create');
         $('.newOne .textField').focus();
