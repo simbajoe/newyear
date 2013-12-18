@@ -64,11 +64,68 @@
         }
     };
 
+    Parties.getList = function (id) {
+        var list = [];
+        $('.party[data-id="' + id + '"]').children('.wantToGift:not(.noGift)').each( function () {
+            var id = $(this).data('id');
+            list.push(id);
+        });
+        return shuffle(list);
+    };
+
+    Parties.getIds = function () {
+        var ids = [];
+        $('.party').each(function () {
+            ids.push($(this).data('id'));
+        });
+        return shuffle(ids);
+    };
+
+    Parties.makeRuffle = function () {
+        var giftFromIds = this.getIds();
+        var giftToIds = [];
+        var lists = [];
+
+        var n = giftFromIds.length;
+        var ps = [];
+        for (var i = 0; i < n; i++) {
+            ps.push(0);
+            lists.push(this.getList(giftFromIds[i]));
+        }
+
+        var i = 0;
+        while (true) {
+            var list = $.grep(lists[i], function (id, j) {
+                return $.inArray(id, giftToIds) < 0;
+            });
+            if (ps[i] >= list.length) {
+                if (i == 0) {
+                    return null;
+                }
+                ps[i] = 0;
+                giftToIds.pop();
+                i--;
+                continue;
+            }
+            giftToIds.push(list[ps[i]]);
+            ps[i]++;
+            i++;
+            if (i == n) {
+                return [giftFromIds, giftToIds];
+            }
+        }
+    };
+
+    function shuffle(o) {
+        for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+    };
+
 })();
 
 jQuery.fn.center = function () {
-    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
-    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2)) + "px");
+    /*this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2)) + "px");*/
     return this;
 }
 
@@ -92,15 +149,33 @@ $(window).load(function () {
     ], 400, 20000);
 
     var onresize = function () {
-        $('.content').center();
+        $('.wrapper').center();
     };
 
     /*snow.run();*/
-    Navigation.showPage('main');
+    /*Navigation.showPage('main');*/
+    Navigation.showPage('create');
+    Parties.addParty('Denis');
+    Parties.addParty('Lena');
+    Parties.addParty('Vadim');
+    Parties.addParty('Kate');
+    Parties.addParty('Ivan');
     $('.createRaffle').click(function () {
         Navigation.showPage('create');
         onresize();
         $('.newOne .textField').focus();
+    });
+
+    $('.runRaffle').click(function () {
+        $('.notice').hide();
+        onresize();
+        var results = Parties.makeRuffle();
+        if (!results) {
+            $('.notice').show();
+            onresize();
+            return;
+        }
+        /*Navigation.showPage('run');*/
     });
 
     $('.ok').click(function () {
@@ -119,7 +194,7 @@ $(window).load(function () {
     });
 
     $(window).resize(onresize);
-    $('.content').resize(onresize);
+    $('.wrapper').resize(onresize);
     onresize();
 });
 

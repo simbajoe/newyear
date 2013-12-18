@@ -43,6 +43,14 @@ p {
     padding: 30px;
     border-radius: 5px;
     width: 70%;
+    margin: auto;
+}
+
+.clear {
+    height: 10px;
+}
+
+.wrapper {
     position: absolute;
     margin: 10px;
 }
@@ -65,6 +73,15 @@ p {
     cursor: pointer;
 }
 
+.notice {
+    text-align: center;
+    margin-top: 20px;
+    color: #d00000;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    display: none;
+}
+
 .textField, .ok {
     border-radius: 5px;
     padding: 0 10px;
@@ -82,6 +99,7 @@ input.textField {
     font-family: 'Lobster', 'Trebuchet MS', sans-serif;
     color: #d00000;
     border: 1px solid #d00000;
+    padding-bottom: 4px;
 }
 
 .ok {
@@ -90,6 +108,7 @@ input.textField {
 
 .party {
     clear: both;
+    height: 50px;
 }
 
 .party .name, .party .wantToGift {
