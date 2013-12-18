@@ -4,8 +4,13 @@
 
     var Navigation = window.Navigation = {};
 
+    var onresize = window.onresize = function () {
+        $('.wrapper').center();
+    };
+
     Navigation.showPage = function (name) {
         $('.' + name).css('display', 'block').siblings().css('display', 'none');
+        onresize();
     };
 
     var Parties = window.Parties = {
@@ -83,6 +88,9 @@
 
     Parties.makeRuffle = function () {
         var giftFromIds = this.getIds();
+        if (!giftFromIds.length) {
+            return null;
+        }
         var giftToIds = [];
         var lists = [];
 
@@ -114,6 +122,45 @@
                 return [giftFromIds, giftToIds];
             }
         }
+    };
+
+    var Raffle = window.Raffle = {
+        results: null,
+        i: 0
+    };
+
+    Raffle.init = function (results) {
+        this.results = results;
+        this.i = 0;
+        $('.next').unbind('click');
+        $('.who').unbind('click');
+        this.next();
+    };
+
+    Raffle.next = function () {
+        console.log(this.i, this.results[0]);
+        $('.raffle p').hide();
+        if (this.i >= this.results[0].length) {
+            $('.newyear').show();
+            return;
+        }
+        var me = this;
+        var giftFrom = $('.party[data-id="' + this.results[0][this.i] + '"]').data('name');
+        var giftTo = $('.party[data-id="' + this.results[1][this.i] + '"]').data('name');
+        $('.giftFrom .name').html(giftFrom);
+        $('.giftTo .name').html(giftTo);
+        $('.giftFrom').show();
+        $('.who').show();
+        $('.who').click(function () {
+            $('.giftTo').show();
+            $('.next').show();
+            $('.who').unbind('click');
+            $('.next').click(function () {
+                $('.next').unbind('click');
+                me.i++;
+                me.next();
+            });
+        });
     };
 
     function shuffle(o) {
@@ -148,18 +195,14 @@ $(window).load(function () {
         '/img/snow/15.png'
     ], 400, 20000);
 
-    var onresize = function () {
-        $('.wrapper').center();
-    };
-
     /*snow.run();*/
-    /*Navigation.showPage('main');*/
-    Navigation.showPage('create');
-    Parties.addParty('Denis');
-    Parties.addParty('Lena');
-    Parties.addParty('Vadim');
-    Parties.addParty('Kate');
-    Parties.addParty('Ivan');
+    Navigation.showPage('main');
+    /*Navigation.showPage('create');*/
+    /*Parties.addParty('Denis');*/
+    /*Parties.addParty('Lena');*/
+    /*Parties.addParty('Vadim');*/
+    /*Parties.addParty('Kate');*/
+    /*Parties.addParty('Ivan');*/
     $('.createRaffle').click(function () {
         Navigation.showPage('create');
         onresize();
@@ -167,15 +210,16 @@ $(window).load(function () {
     });
 
     $('.runRaffle').click(function () {
-        $('.notice').hide();
-        onresize();
         var results = Parties.makeRuffle();
         if (!results) {
             $('.notice').show();
             onresize();
             return;
         }
-        /*Navigation.showPage('run');*/
+        $('.notice').hide();
+        Navigation.showPage('raffle');
+        Raffle.init(results);
+        onresize();
     });
 
     $('.ok').click(function () {
@@ -188,7 +232,8 @@ $(window).load(function () {
 
     $('.newOne .textField').keypress(function(event) {
         // Enter
-        if (event.charCode == 13) {
+        var code = event.charCode || event.keyCode;
+        if (code == 13) {
             $('.ok').click();
         }
     });

@@ -38,25 +38,83 @@ p {
 }
 
 .content {
-    background: rgb(200, 230, 255);
-    background: rgba(200, 230, 255, 0.7);
-    padding: 30px;
-    border-radius: 5px;
-    width: 70%;
     margin: auto;
-}
-
-.clear {
-    height: 10px;
+    width: 70%;
 }
 
 .wrapper {
     position: absolute;
+    width: 100%;
+}
+
+.wrapper2 {
     margin: 10px;
+    margin-top: 50px;
+}
+
+.menu {
+    top: 0;
+    position: absolute;
+    /*height: 40px;*/
+    width: 100%;
+    z-index: 100;
+}
+
+.menu p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.menu a {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Lobster', 'Trebuchet MS', sans-serif;
+    color: #005089;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #5090ff;
 }
 
 .page {
     display: none;
+    background: rgb(200, 230, 255);
+    background: rgba(200, 230, 255, 0.7);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.page.raffle {
+    background: none;
+}
+
+.raffle p {
+    text-align: center;
+    color: #d00000;
+    font-weight: bold;
+    /*display: none;*/
+}
+
+.raffle span {
+    background: rgb(200, 230, 255);
+    background: rgba(200, 230, 255, 0.6);
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgba(200, 230, 255, 0.8);
+}
+
+.raffle .name, .newyear span {
+    font-size: 36px;
+    font-weight: normal;
+    font-family: 'Lobster', 'Trebuchet MS', sans-serif;
+}
+
+.who span, .next span {
+    background: rgba(200, 230, 255, 0.8);
+    border: 2px dotted #d00000;
+    cursor: pointer;
 }
 
 .btn {
