@@ -6,6 +6,7 @@
 
     var onresize = window.onresize = function () {
         $('.wrapper').center();
+        $('body').height($('.wrapper').outerHeight());
     };
 
     Navigation.showPage = function (name) {
@@ -196,7 +197,6 @@ $(window).load(function () {
         '/img/snow/15.png'
     ], 400, 20000);
 
-    /*snow.run();*/
     Navigation.showPage('main');
     /*Navigation.showPage('create');*/
     /*Parties.addParty('Denis');*/
@@ -242,6 +242,7 @@ $(window).load(function () {
     $(window).resize(onresize);
     $('.wrapper').resize(onresize);
     onresize();
+    snow.run();
 });
 
 
