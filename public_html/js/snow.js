@@ -13,7 +13,7 @@
         var me = this;
         setInterval(function () {
             var width = $(me.element).width();
-            var height = $(window).height() - 30;
+            var height = Math.max($(me.element).height(), $(window).height()) - 30;
             var left = Math.floor(30 + Math.random() * (width - 60));
             var leftTo = left + (Math.random() > 0.5 ? -1 : 1) * Math.random() * 100;
             if (leftTo > width - 30) {
