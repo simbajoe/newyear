@@ -90,16 +90,18 @@ $(window).load(function () {
         '/img/snow/14.png',
         '/img/snow/15.png'
     ], 400, 20000);
-    /*snow.run();*/
-    Navigation.showPage('main');
-    $('.createRaffle').click(function () {
-        Navigation.showPage('create');
-        $('.newOne .textField').focus();
-    });
 
     var onresize = function () {
         $('.content').center();
     };
+
+    /*snow.run();*/
+    Navigation.showPage('main');
+    $('.createRaffle').click(function () {
+        Navigation.showPage('create');
+        onresize();
+        $('.newOne .textField').focus();
+    });
 
     $('.ok').click(function () {
         var input = $('.newOne .textField');

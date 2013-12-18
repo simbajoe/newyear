@@ -38,8 +38,8 @@ p {
 }
 
 .content {
-    background: rgb(135, 206, 235);
-    background: rgba(135, 206, 235, 0.7);
+    background: rgb(200, 230, 255);
+    background: rgba(200, 230, 255, 0.7);
     padding: 30px;
     border-radius: 5px;
     width: 70%;
