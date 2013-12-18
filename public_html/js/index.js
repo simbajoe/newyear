@@ -19,6 +19,7 @@
 
     Parties.remove = function (id) {
         $('div[data-id="' + id + '"]').remove();
+        onresize();
     };
 
     Parties.removeWantToGift = function (id, otherId) {
