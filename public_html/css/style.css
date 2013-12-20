@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;
 }
 
+.lang.en {
+    display: none;
+}
+
 h2 {
     font-size: 36px;
     font-family: 'Lobster', 'Trebuchet MS', sans-serif;

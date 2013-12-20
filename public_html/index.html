@@ -11,8 +11,9 @@
 	<body>
         <div class="menu">
             <p>
-            <a href="javascript:void(0);" onclick="Navigation.showPage('main');"><span class="lang ru">Главная<span></a>
-            <a href="javascript:void(0);" onclick="Navigation.showPage('create');"><span class="lang ru">Создание<span></a>
+            <a href="javascript:void(0);" onclick="Navigation.showPage('main');"><span class="lang ru">Главная</span><span class="lang en">Home</span></a>
+            <a href="javascript:void(0);" onclick="Navigation.showPage('create');"><span class="lang ru">Мастерская</span><span class="lang en">Workshop</span></a>
+            <a href="javascript:void(0);"><span class="lang ru" onclick="changeLanguage('en');">English</span><span class="lang en" onclick="changeLanguage('ru');">Русский</span></a>
             </p>
         </div>
         <div class="wrapper">
@@ -21,35 +22,51 @@
                     <div class="page main">
                         <div class="lang ru">
                             <h2>Новогодний розыгрыш!</h2>
-                            <p>Понимаете, каждый год 31 декабря мы с друзьями разыгрываем подарки. Это у нас такая традиция…</p>
+                            <p>Понимаете, каждый год 31 декабря мы с друзьями разыгрываем подарки. Это у нас такая традиция...</p>
                             <p>Иногда заранее не известно, кто придет на новогоднее торжество, а подарить и получить подарок хочет каждый. В таком случае мы договариваемся, что каждый принесет по одному подарку, а кто, кому и что подарит, решим на месте случайным образом.</p>
                             <p>Бывает, что подарок рассчитан на особь строго определенного пола, и не хотелось бы, чтобы зеркальце или духи получил парень, а девушке достался мужской ремень. Иногда гости приходят парами и не хотят дарить друг другу этот "общественный" подарок, потому что у них уже заготовлено что-то друг для друга, или они выбирали общие подарки вместе.</p>
                             <p>В таком случае шляпы и фантов может быть не достаточно.</p>
                             <p>Именно для таких розыгрышей и предназначен данный новогодний сайт.</p>
                         </div>
-                        <div class="btn createRaffle"><span class="lang ru">Хочу создать розыгрыш!</span></div>
+                        <div class="lang en">
+                            <h2>Secret Santa!</h2>
+                            <p>You know, every year on the 31st of December my friends and I play Secret Santa. That's our tradition...</p>
+                            <p>Sometimes we don't know exactly who's going to be our guest. Yet, what we know for sure is that all the guests would love to give and receive a gift. So we arrange that everyone brings one gift to give and during the party randomly assign the receivers.</p>
+                            <p>It happens that someone's present is more suitable for guests of certain sex, or certain age, etc. I mean perhaps you wouldn't like your male friend to get a lipstick as a present, and vice versa your pretty female colleague to receive as a present something masculine and brutal. It depends on a person, right?</p>
+                            <p>Usual hat and paper slips with names are absolutely random and don't really let you match better the gifts and their receivers.</p>
+                            <p>Keeping that in mind I have designed this web site to help my guests get presents that match them better!</p>
+                        </div>
+                        <div class="btn createRaffle"><span class="lang ru">Хочу создать розыгрыш!</span><span class="lang en">Go to workshop!</span></div>
                     </div>
                     <div class="page create">
                         <div class="lang ru">
                             <h2>Новогодний розыгрыш!</h2>
-                            <p>На этой странице вы можете добавить участников розыгрыша.</p>
+                            <p>Это мастерская. Здесь можно создать розыгрыш! На этой странице вы можете добавить участников.</p>
                             <p>Для каждого из них можно определить список возможных получателей. Изначально, считается, что подарок может достаться каждому. Чтобы включить или исключить человека из списка возможных получателей, щелкните на его имя.</p>
                             <p>Чтобы удалить участника, щелкните на крестик рядом с его именем, и он пропадет из всех списков.</p>
                             <p>Чтобы начать розыгрыш, нажмите кнопку "Поехали".</p>
                             <p>Не перестарайтесь, если списки возможных получателей будут сильно урезаны, создание розыгрыша может занять много времени или закончиться неудачей.</p>
                         </div>
-                        <p class="newOne"><span class="lang ru">Добавить участника<span>: <input type="text" class="textField" /> <input type="button" class="ok" value="OK" /></p>
+                        <div class="lang en">
+                            <h2>Secret Santa!</h2>
+                            <p>Here is a workshop. On this page you can add the names of your Secret Santas.</p>
+                            <p>For each Santa you'll get a number of gift receivers. By default all the participants are included in the list of those who can receive the gift. If you want to include or exclude any gift receiver click on his or her name.</p>
+                            <p>To delete a participant click on the "X" near his name and the name will disappear from all the lists.</p>
+                            <p>To start the fun click the "Go!" button.</p>
+                            <p>Don't be too scrupulous in assigning the possible receivers of the gifts, don't make the receivers lists too short – otherwise you risk to take too long or even fail to do so and spoil the whole fun of unexpected presents!</p>
+                        </div>
+                        <p class="newOne"><span class="lang ru">Добавить участника</span><span class="lang en">Add participant</span>: <input type="text" class="textField" /> <input type="button" class="ok" value="OK" /></p>
                         <div class="parties"></div>
-                        <div class="notice"><span class="lang ru">Не получилось создать розыгрыш :( Добавьте участника или измените списки получателей<span></div>
-                        <div class="btn runRaffle"><span class="lang ru">Поехали!<span></div>
+                        <div class="notice"><span class="lang ru">Не получилось создать розыгрыш :( Добавьте участника или измените списки получателей</span><span class="lang en">Secret Santa failure :( Add a participant or change the possible receivers' lists</span></div>
+                        <div class="btn runRaffle"><span class="lang ru">Поехали!</span><span class="lang en">Go!</span></div>
                     </div>
                     <div class="page raffle">
-                        <p class="giftFrom"><span class="name"></span> <span class="lang ru">хочет что-то подарить...</span></p>
-                        <p class="who"><span class="lang ru">Кому?</span></p>
-                        <p class="giftTo"><span class="name"></span> <span class="lang ru">получит подарок!</span></p>
-                        <p class="next"><span class="lang ru">Дальше</span></p>
-                        <p class="newyear"><span class="lang ru">Вот и всё...</span></p>
-                        <p class="newyear"><span class="lang ru">С Новым Годом и Рождеством!</span></p>
+                        <p class="giftFrom"><span class="name"></span> <span class="lang ru">хочет что-то подарить...</span><span class="lang en">wants to present something...</span></p>
+                        <p class="who"><span class="lang ru">Кому?</span><span class="lang en">To whom?</span></p>
+                        <p class="giftTo"><span class="name"></span> <span class="lang ru">получит подарок!</span><span class="lang en">will receive the gift!</span></p>
+                        <p class="next"><span class="lang ru">Дальше</span><span class="lang en">Next</span></p>
+                        <p class="newyear"><span class="lang ru">Вот и всё...</span><span class="lang en">That's it...</span></p>
+                        <p class="newyear"><span class="lang ru">С Новым Годом и Рождеством!</span><span class="lang en">Happy New Year and Merry Christmas!</span></p>
                     </div>
                 </div>
             </div>

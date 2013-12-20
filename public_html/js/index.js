@@ -170,6 +170,12 @@
         return o;
     };
 
+    var changeLanguage = window.changeLanguage = function (lang) {
+        $('.lang:not(.' + lang + ')').hide();
+        $('.lang.' + lang).show();
+        onresize();
+    };
+
 })();
 
 jQuery.fn.center = function () {
@@ -197,33 +203,13 @@ $(window).load(function () {
         '/img/snow/15.png'
     ], 400, 20000, 10000);
 
-    /*Navigation.showPage('main');*/
-    Navigation.showPage('create');
-    Parties.addParty('Denis');
-    Parties.addParty('Lena');
-    Parties.addParty('Vadim');
-    Parties.addParty('Kate');
-    Parties.addParty('Ivan');
-    Parties.addParty('Denis');
-    Parties.addParty('Lena');
-    Parties.addParty('Vadim');
-    Parties.addParty('Kate');
-    Parties.addParty('Ivan');
-    Parties.addParty('Denis');
-    Parties.addParty('Lena');
-    Parties.addParty('Vadim');
-    Parties.addParty('Kate');
-    Parties.addParty('Ivan');
-    Parties.addParty('Denis');
-    Parties.addParty('Lena');
-    Parties.addParty('Vadim');
-    Parties.addParty('Kate');
-    Parties.addParty('Ivan');
-    Parties.addParty('Denis');
-    Parties.addParty('Lena');
-    Parties.addParty('Vadim');
-    Parties.addParty('Kate');
-    Parties.addParty('Ivan');
+    Navigation.showPage('main');
+    /*Navigation.showPage('create');*/
+    /*Parties.addParty('Denis');*/
+    /*Parties.addParty('Lena');*/
+    /*Parties.addParty('Vadim');*/
+    /*Parties.addParty('Kate');*/
+    /*Parties.addParty('Ivan');*/
     $('.createRaffle').click(function () {
         Navigation.showPage('create');
         onresize();
