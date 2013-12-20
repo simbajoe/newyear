@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+        <title>Новогодний розыгрыш - Secret Santa</title>
 		<script type="text/javascript" src="/js/jquery.js"></script>
 		<script type="text/javascript" src="/js/snow.js"></script>
 		<script type="text/javascript" src="/js/index.js"></script>
@@ -14,7 +15,7 @@
         <div class="menu">
             <p>
             <a href="javascript:void(0);" onclick="Navigation.showPage('main');"><span class="lang ru">Главная</span><span class="lang en">Home</span></a>
-            <a href="javascript:void(0);" onclick="Navigation.showPage('create');"><span class="lang ru">Мастерская</span><span class="lang en">Workshop</span></a>
+            <a href="javascript:void(0);" onclick="Navigation.showPage('create');"><span class="lang ru">Обмен подарками</span><span class="lang en">Gift exchange</span></a>
             <a href="javascript:void(0);"><span class="lang ru" onclick="changeLanguage('en');">English</span><span class="lang en" onclick="changeLanguage('ru');">Русский</span></a>
             </p>
         </div>
@@ -38,12 +39,12 @@
                             <p>Usual hat and paper slips with names are absolutely random and don't really let you match better the gifts and their receivers.</p>
                             <p>Keeping that in mind I have designed this web site to help my guests get presents that match them better!</p>
                         </div>
-                        <div class="btn createRaffle"><span class="lang ru">Хочу создать розыгрыш!</span><span class="lang en">Go to workshop!</span></div>
+                        <div class="btn createRaffle"><span class="lang ru">Хочу создать розыгрыш!</span><span class="lang en">Start gift exchange!</span></div>
                     </div>
                     <div class="page create">
                         <div class="lang ru">
                             <h2>Новогодний розыгрыш!</h2>
-                            <p>Это мастерская. Здесь можно создать розыгрыш! На этой странице вы можете добавить участников.</p>
+                            <p>Здесь можно создать розыгрыш! На этой странице вы можете добавить участников.</p>
                             <p>Для каждого из них можно определить список возможных получателей. Изначально, считается, что подарок может достаться каждому. Чтобы включить или исключить человека из списка возможных получателей, щелкните на его имя.</p>
                             <p>Чтобы удалить участника, щелкните на крестик рядом с его именем, и он пропадет из всех списков.</p>
                             <p>Чтобы начать розыгрыш, нажмите кнопку "Поехали".</p>
@@ -51,7 +52,7 @@
                         </div>
                         <div class="lang en">
                             <h2>Secret Santa!</h2>
-                            <p>Here is a workshop. On this page you can add the names of your Secret Santas.</p>
+                            <p>Here you can start your gift exchange. On this page you can add the names of your Secret Santas.</p>
                             <p>For each Santa you'll get a number of gift receivers. By default all the participants are included in the list of those who can receive the gift. If you want to include or exclude any gift receiver click on his or her name.</p>
                             <p>To delete a participant click on the "X" near his name and the name will disappear from all the lists.</p>
                             <p>To start the fun click the "Go!" button.</p>
@@ -74,15 +75,18 @@
             </div>
         </div>
         <script type="text/javascript">
+
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-33866306-2']);
+            _gaq.push(['_setDomainName', 'simbajoe.name']);
             _gaq.push(['_trackPageview']);
 
-            (function() {
-             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-             })();
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
         </script>
 	</body>
 </html>
