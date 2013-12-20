@@ -195,15 +195,35 @@ $(window).load(function () {
         '/img/snow/13.png',
         '/img/snow/14.png',
         '/img/snow/15.png'
-    ], 400, 20000);
+    ], 400, 20000, 10000);
 
-    Navigation.showPage('main');
-    /*Navigation.showPage('create');*/
-    /*Parties.addParty('Denis');*/
-    /*Parties.addParty('Lena');*/
-    /*Parties.addParty('Vadim');*/
-    /*Parties.addParty('Kate');*/
-    /*Parties.addParty('Ivan');*/
+    /*Navigation.showPage('main');*/
+    Navigation.showPage('create');
+    Parties.addParty('Denis');
+    Parties.addParty('Lena');
+    Parties.addParty('Vadim');
+    Parties.addParty('Kate');
+    Parties.addParty('Ivan');
+    Parties.addParty('Denis');
+    Parties.addParty('Lena');
+    Parties.addParty('Vadim');
+    Parties.addParty('Kate');
+    Parties.addParty('Ivan');
+    Parties.addParty('Denis');
+    Parties.addParty('Lena');
+    Parties.addParty('Vadim');
+    Parties.addParty('Kate');
+    Parties.addParty('Ivan');
+    Parties.addParty('Denis');
+    Parties.addParty('Lena');
+    Parties.addParty('Vadim');
+    Parties.addParty('Kate');
+    Parties.addParty('Ivan');
+    Parties.addParty('Denis');
+    Parties.addParty('Lena');
+    Parties.addParty('Vadim');
+    Parties.addParty('Kate');
+    Parties.addParty('Ivan');
     $('.createRaffle').click(function () {
         Navigation.showPage('create');
         onresize();
@@ -219,6 +239,7 @@ $(window).load(function () {
         }
         $('.notice').hide();
         Navigation.showPage('raffle');
+        snow.reanimate();
         Raffle.init(results);
         onresize();
     });
