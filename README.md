@@ -1,5 +1,4 @@
 ## Christmas tool
-=======
 
 New year raffle for a friendly company.
 
