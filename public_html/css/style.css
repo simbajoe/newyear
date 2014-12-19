@@ -1,6 +1,6 @@
 body {
     background: no-repeat center center fixed;
-    background-image: url('/img/bg/winter-night-2.jpg');
+    background-image: url('../img/bg/winter-night-2.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -215,5 +215,10 @@ input.textField {
     right: 2px;
     top: 0;
     cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url(../fonts/Lobster/Lobster-Regular.ttf);
 }
 

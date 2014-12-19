@@ -186,21 +186,21 @@ jQuery.fn.center = function () {
 
 $(window).load(function () {
     var snow = new Snow('body', [
-        '/img/snow/1.png',
-        '/img/snow/2.png',
-        '/img/snow/3.png',
-        '/img/snow/4.png',
-        '/img/snow/5.png',
-        '/img/snow/6.png',
-        '/img/snow/7.png',
-        '/img/snow/8.png',
-        '/img/snow/9.png',
-        '/img/snow/10.png',
-        '/img/snow/11.png',
-        '/img/snow/12.png',
-        '/img/snow/13.png',
-        '/img/snow/14.png',
-        '/img/snow/15.png'
+        'img/snow/1.png',
+        'img/snow/2.png',
+        'img/snow/3.png',
+        'img/snow/4.png',
+        'img/snow/5.png',
+        'img/snow/6.png',
+        'img/snow/7.png',
+        'img/snow/8.png',
+        'img/snow/9.png',
+        'img/snow/10.png',
+        'img/snow/11.png',
+        'img/snow/12.png',
+        'img/snow/13.png',
+        'img/snow/14.png',
+        'img/snow/15.png'
     ], 400, 20000, 10000);
 
     Navigation.showPage('main');
